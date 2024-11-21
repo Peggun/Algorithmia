@@ -1,0 +1,88 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35506.116 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithmia.Core", "Algorithmia.Core\Algorithmia.Core.csproj", "{B8777947-3790-4276-BB3B-7FFBCF81ACE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithmia.Modules", "Algorithmia.Modules\Algorithmia.Modules.csproj", "{FB293206-EF0A-4259-9813-2213B39D87C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithmia.Visualisation", "Algorithmia.Visualisation\Algorithmia.Visualisation.csproj", "{F72C9269-CD12-45AD-8369-24F9EA298FE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithmia.Interfaces", "Algorithmia.Interfaces\Algorithmia.Interfaces.csproj", "{FB13332D-FBCA-4400-882B-C95C6F76D666}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithmia.CLI", "Algorithmia.CLI\Algorithmia.CLI.csproj", "{A0CBEA06-BB73-419F-BE3D-6DF206B057D6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{34D129D6-40C2-41FE-BCBF-8121CD0C4860}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{37F3490F-3168-4CB2-B730-CEFAE25AD1E1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{DDDB6DEB-19ED-412E-A7BE-3FC214472C95}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{D2AD33D4-6A19-4A0B-95EC-38BCACF808AD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{CA0917AF-1DBC-40C8-959A-B8CC054003C2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{F70AFC52-88AF-4545-BF9F-47BFC5A18922}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{BFE1F269-C686-41B1-8BB3-826EB1BD9881}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithmia.CoreTests", "Algorithmia.CoreTests\Algorithmia.CoreTests.csproj", "{10AB6CF9-1BA2-4636-ADF9-0053BE358CA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithmia.ModuleTests", "Algorithmia.ModuleTests\Algorithmia.ModuleTests.csproj", "{8EFA3673-DBFB-4803-9BA1-7EC286748978}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithmia.Examples", "Algorithmia.Examples\Algorithmia.Examples.csproj", "{41F78388-DFE7-4C15-8547-15FB5979B327}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B8777947-3790-4276-BB3B-7FFBCF81ACE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8777947-3790-4276-BB3B-7FFBCF81ACE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8777947-3790-4276-BB3B-7FFBCF81ACE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8777947-3790-4276-BB3B-7FFBCF81ACE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB293206-EF0A-4259-9813-2213B39D87C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB293206-EF0A-4259-9813-2213B39D87C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB293206-EF0A-4259-9813-2213B39D87C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB293206-EF0A-4259-9813-2213B39D87C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F72C9269-CD12-45AD-8369-24F9EA298FE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F72C9269-CD12-45AD-8369-24F9EA298FE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F72C9269-CD12-45AD-8369-24F9EA298FE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F72C9269-CD12-45AD-8369-24F9EA298FE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB13332D-FBCA-4400-882B-C95C6F76D666}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB13332D-FBCA-4400-882B-C95C6F76D666}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB13332D-FBCA-4400-882B-C95C6F76D666}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB13332D-FBCA-4400-882B-C95C6F76D666}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0CBEA06-BB73-419F-BE3D-6DF206B057D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0CBEA06-BB73-419F-BE3D-6DF206B057D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0CBEA06-BB73-419F-BE3D-6DF206B057D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0CBEA06-BB73-419F-BE3D-6DF206B057D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10AB6CF9-1BA2-4636-ADF9-0053BE358CA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10AB6CF9-1BA2-4636-ADF9-0053BE358CA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10AB6CF9-1BA2-4636-ADF9-0053BE358CA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10AB6CF9-1BA2-4636-ADF9-0053BE358CA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EFA3673-DBFB-4803-9BA1-7EC286748978}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EFA3673-DBFB-4803-9BA1-7EC286748978}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EFA3673-DBFB-4803-9BA1-7EC286748978}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EFA3673-DBFB-4803-9BA1-7EC286748978}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41F78388-DFE7-4C15-8547-15FB5979B327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41F78388-DFE7-4C15-8547-15FB5979B327}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41F78388-DFE7-4C15-8547-15FB5979B327}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41F78388-DFE7-4C15-8547-15FB5979B327}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B8777947-3790-4276-BB3B-7FFBCF81ACE3} = {34D129D6-40C2-41FE-BCBF-8121CD0C4860}
+		{FB293206-EF0A-4259-9813-2213B39D87C7} = {34D129D6-40C2-41FE-BCBF-8121CD0C4860}
+		{F72C9269-CD12-45AD-8369-24F9EA298FE8} = {34D129D6-40C2-41FE-BCBF-8121CD0C4860}
+		{FB13332D-FBCA-4400-882B-C95C6F76D666} = {34D129D6-40C2-41FE-BCBF-8121CD0C4860}
+		{A0CBEA06-BB73-419F-BE3D-6DF206B057D6} = {34D129D6-40C2-41FE-BCBF-8121CD0C4860}
+		{10AB6CF9-1BA2-4636-ADF9-0053BE358CA7} = {37F3490F-3168-4CB2-B730-CEFAE25AD1E1}
+		{8EFA3673-DBFB-4803-9BA1-7EC286748978} = {37F3490F-3168-4CB2-B730-CEFAE25AD1E1}
+		{41F78388-DFE7-4C15-8547-15FB5979B327} = {D2AD33D4-6A19-4A0B-95EC-38BCACF808AD}
+	EndGlobalSection
+EndGlobal
