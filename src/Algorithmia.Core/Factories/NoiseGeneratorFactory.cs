@@ -12,6 +12,8 @@ namespace Algorithmia.Factories
             type switch
             {
                 FastNoiseLite.NoiseType.Perlin => new PerlinNoise(),
+                FastNoiseLite.NoiseType.OpenSimplex2 => new OpenSimplex2Noise(),
+                FastNoiseLite.NoiseType.OpenSimplex2S => new OpenSimplex2SNoise(),
                 _ => throw new ArgumentException($"Unsupported noise type: {type}", nameof(type))
             };
     }

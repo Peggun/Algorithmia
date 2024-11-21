@@ -1,14 +1,14 @@
-﻿using Algorithmia.Factories;
-using Algorithmia.Enums;
+﻿using Algorithmia.Enums;
+using Algorithmia.Factories;
 using Algorithmia.Interfaces;
 using Algorithmia.Sinks;
 
-namespace Algorithmia.Examples.NoiseDemos.Perlin
+namespace Algorithmia.Examples.NoiseDemos
 {
     /// <summary>
-    /// Demonstrates Perlin noise generation and rendering to a image file.
+    /// Demonstrates Open Simplex 2 noise generation and rendering to a image file.
     /// </summary>
-    public class PerlinNoiseDemo
+    public class OpenSimplex2NoiseDemo
     {
         private const int Width = 16;
         private const int Height = 16;
@@ -18,14 +18,12 @@ namespace Algorithmia.Examples.NoiseDemos.Perlin
         {
             try
             {
-                var perlinNoise = NoiseGeneratorFactory.CreateNoiseGenerator(FastNoiseLite.NoiseType.Perlin);
-                perlinNoise.SetSeed(1337);
-                perlinNoise.SetFrequency(0.1f);
-
-                //perlinNoise.SetOutputFileType(FileTypes.JPEG);  // For image sink
+                var openSimplex2 = NoiseGeneratorFactory.CreateNoiseGenerator(FastNoiseLite.NoiseType.OpenSimplex2);
+                openSimplex2.SetSeed(1337);
+                openSimplex2.SetFrequency(0.1f);
 
                 // Generate Noise Map
-                float[,] noise = perlinNoise.GenerateNoiseMap(Width, Height, Scale);
+                float[,] noise = openSimplex2.GenerateNoiseMap(Width, Height, Scale);
 
                 var sinks = new ISink[]
                 {

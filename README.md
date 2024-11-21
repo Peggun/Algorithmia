@@ -77,7 +77,7 @@ catch (Exception ex)
 ## Roadmap (with more to add)
 - [x] Initial library release with Perlin noise support.
 - [x] Added Sink Support (Console, Debug Console, Plain Text, Image File)
-- [ ] Expand noise algorithms and add more (e.g., Simplex, Voronoi).
+- [x] Expand noise algorithms and add more (e.g., Simplex, Voronoi).
 - [ ] Multi-language bindings (e.g., Python, JavaScript).
 - [ ] Add 3D terrain generation.
 - [ ] Distribute via NuGet and other ways like through DLL's.

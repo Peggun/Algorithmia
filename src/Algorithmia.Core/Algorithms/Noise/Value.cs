@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Algorithmia.Core.Algorithms.Noise
+﻿namespace Algorithmia.Noise
 {
-    internal class Value
+    public class ValueNoise : BaseNoiseGenerator
     {
+        public ValueNoise() => Noise.SetNoiseType(FastNoiseLite.NoiseType.Value);
+        public override float GetNoise(float x, float y) => Noise.GetNoise(x, y);
+        public override float GetNoise(float x, float y, float z) => Noise.GetNoise(x, y, z);
     }
 }

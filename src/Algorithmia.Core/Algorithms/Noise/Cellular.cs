@@ -5,14 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Algorithmia.Core.Algorithms.Noise
+namespace Algorithmia.Noise
 {
-    public class CellularNoise
+    public class CellularNoise : BaseNoiseGenerator
     {
-        FastNoiseLite _noise = new FastNoiseLite();
-        public CellularNoise(int seed = 1234)
-        {
-            _noise.SetSeed(seed);   
-        }
+        public CellularNoise() => Noise.SetNoiseType(FastNoiseLite.NoiseType.Cellular);
+        public override float GetNoise(float x, float y) => Noise.GetNoise(x, y);
+        public override float GetNoise(float x, float y, float z) => Noise.GetNoise(x, y, z);
     }
 }

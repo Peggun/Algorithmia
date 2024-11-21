@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Algorithmia.Core.Algorithms.Noise
+﻿namespace Algorithmia.Noise
 {
-    internal class OpenSimplex2S
+    public class OpenSimplex2SNoise : BaseNoiseGenerator
     {
+        public OpenSimplex2SNoise() => Noise.SetNoiseType(FastNoiseLite.NoiseType.Perlin);
+        public override float GetNoise(float x, float y) => Noise.GetNoise(x, y);
+        public override float GetNoise(float x, float y, float z) => Noise.GetNoise(x, y, z);
     }
 }
