@@ -1,7 +1,7 @@
 ﻿using FNLfloat = System.Single;
-using Algorithmia.Core.Enums;
+using Algorithmia.Enums;
 
-namespace Algorithmia.Core.Interfaces
+namespace Algorithmia.Interfaces
 {
     /// <summary>
     /// Interface for all noise generators. Encapsulates common operations for noise generation.

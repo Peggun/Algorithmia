@@ -1,7 +1,8 @@
-﻿using Algorithmia.Core.Enums;
+﻿using Algorithmia.Enums;
+using Algorithmia.Noise;
 using SkiaSharp;
 
-namespace Algorithmia.Core.Algorithms.Noise
+namespace Algorithmia.Noise
 {
     public class PerlinNoise : BaseNoiseGenerator
     {

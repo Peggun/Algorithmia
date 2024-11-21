@@ -1,7 +1,7 @@
-﻿using Algorithmia.Core.Interfaces;
-using Algorithmia.Core.Algorithms.Noise;
+﻿using Algorithmia.Interfaces;
+using Algorithmia.Noise;
 
-namespace Algorithmia.Core.Factories
+namespace Algorithmia.Factories
 {
     /// <summary>
     /// Factory for creating noise generator instances based on the noise type.

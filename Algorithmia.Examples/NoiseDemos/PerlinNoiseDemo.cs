@@ -1,5 +1,5 @@
-﻿using Algorithmia.Core.Factories;
-using Algorithmia.Core.Enums;
+﻿using Algorithmia.Factories;
+using Algorithmia.Enums;
 using SkiaSharp;
 
 namespace Algorithmia.Examples.NoiseDemos.Perlin

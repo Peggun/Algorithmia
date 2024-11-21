@@ -1,8 +1,8 @@
-﻿using Algorithmia.Core.Enums;
-using Algorithmia.Core.Interfaces;
+﻿using Algorithmia.Enums;
+using Algorithmia.Interfaces;
 using FNLfloat = System.Single;
 
-namespace Algorithmia.Core.Algorithms.Noise
+namespace Algorithmia.Noise
 {
     /// <summary>
     /// Base class for noise generation. Implements common FastNoiseLite functionality.

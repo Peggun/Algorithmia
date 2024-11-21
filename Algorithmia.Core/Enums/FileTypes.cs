@@ -1,4 +1,4 @@
-﻿namespace Algorithmia.Core.Enums
+﻿namespace Algorithmia.Enums
 {
     public enum FileTypes
     {

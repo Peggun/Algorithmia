@@ -1,5 +1,5 @@
 ﻿using System;
-using Algoritmia.Core.Algorithms.Noise;
+using Algoritmia.Noise;
 
 namespace Algoritmia.Examples.NoiseDemos
 {

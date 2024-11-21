@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Algoritmia.Core.Algorithms.Noise
+namespace Algoritmia.Noise
 {
     public class NoiseGenerator
     {
