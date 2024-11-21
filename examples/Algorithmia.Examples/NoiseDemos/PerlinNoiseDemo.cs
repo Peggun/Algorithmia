@@ -1,18 +1,17 @@
 ﻿using Algorithmia.Factories;
 using Algorithmia.Enums;
-using SkiaSharp;
 using Algorithmia.Interfaces;
 using Algorithmia.Sinks;
 
 namespace Algorithmia.Examples.NoiseDemos.Perlin
 {
     /// <summary>
-    /// Demonstrates Perlin noise generation and rendering to a PNG file.
+    /// Demonstrates Perlin noise generation and rendering to a image file.
     /// </summary>
     public class PerlinNoiseDemo
     {
-        private const int Width = 16;
-        private const int Height = 16;
+        private const int Width = 512;
+        private const int Height = 512;
         private const float Scale = 0.01f;
 
         public static void Run()
