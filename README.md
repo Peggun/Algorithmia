@@ -85,6 +85,9 @@ catch (Exception ex)
 ## Contributing
 If you would like to contribute, see the [CONTRIBUTING]() file for details.
 
+## Documentation
+If you need some help getting started using this library, please start off by reading the [FastNoiseLite documentation](https://github.com/Auburn/FastNoiseLite/wiki/Documentation).
+
 ## License
 This project is licensed under the GNU License. See the [LICENSE]() file for details.
 
