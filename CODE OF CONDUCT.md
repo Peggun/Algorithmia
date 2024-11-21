@@ -1,4 +1,4 @@
-# Code of Conduct for Recolonisation
+# Code of Conduct for Algorithmia
 
 We are committed to making participation in this project a harassment-free experience for everyone, regardless of gender, gender identity and expression, sexual orientation, disability, personal appearance, body size, race, ethnicity, age, religion, or any other status.
 
