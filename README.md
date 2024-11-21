@@ -32,56 +32,55 @@ A fast, flexible, and cross-platform world generation library for C# and other l
         Uses SkiaSharp for the drawing of the Grayscale Images
 */
 
+// These are for now. Will slim them down later.
 using Algorithmia.Factories;
 using Algorithmia.Enums;
-using SkiaSharp;
+using Algorithmia.Interfaces;
+using Algorithmia.Sinks;
 
 private const int Width = 512;
 private const int Height = 512;
 private const float Scale = 0.01f;
-private const int Quality = 100;
 
-public static void Main(string[] args) {
-    try
+try
+{
+    // You can create multiple noises using this way. Just modify FastNoiseLite.NoiseType.Perlin to specific noise
+    var perlinNoise = NoiseGeneratorFactory.CreateNoiseGenerator(FastNoiseLite.NoiseType.Perlin);
+    perlinNoise.SetSeed(1337);
+    perlinNoise.SetFrequency(0.1f);
+
+    //perlinNoise.SetOutputFileType(FileTypes.JPEG);  // No need for this anymore. Still including it because why not.
+
+    // Generate Noise Map
+    float[,] noise = perlinNoise.GenerateNoiseMap(Width, Height, Scale);
+
+    var sinks = new ISink[]
     {
-        using SKBitmap bitmap = new SKBitmap(Width, Height);
-        using SKCanvas canvas = new SKCanvas(bitmap);
+        new ConsoleSink(),                // Output to console
+        new ImageSink(FileTypes.PNG),     // Output to an image (you now define the Image Type in here)
+        new TextFileSink(),               // Output to an text file
+        new DebugSink(),                  // Output to debug console
+    };
 
-        // Create a Perlin noise generator
-        var perlinNoise = NoiseGeneratorFactory.CreateNoiseGenerator(FastNoiseLite.NoiseType.Perlin);
-        perlinNoise.SetSeed(1337);
-        perlinNoise.SetFrequency(0.1f);
-        perlinNoise.SetOutputFileType(FileTypes.JPEG);
-
-        // Generate and render noise
-        for (int y = 0; y < Height; y++)
-        {
-            for (int x = 0; x < Width; x++)
-            {
-                float noiseValue = perlinNoise.GetNoise(x * Scale, y * Scale);
-                int intensity = Math.Clamp((int)((noiseValue + 1) * 127.5f), 0, 255);
-                bitmap.SetPixel(x, y, new SKColor((byte)intensity, (byte)intensity, (byte)intensity));
-            }
-        }
-
-        // Save the image
-        perlinNoise.SaveToFile("PerlinNoise.jpeg", Width, Height, Scale, Quality);
-
-        Console.WriteLine("Noise map saved as PerlinNoise.jpeg");
-    }
-    catch (Exception ex)
+    // Use each sink
+    foreach (var sink in sinks)
     {
-        Console.WriteLine($"Error generating noise: {ex.Message}");
+        sink.Write(noise);
     }
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Error generating noise: {ex.Message}");
 }
 ```
 
 ## Roadmap (with more to add)
 - [x] Initial library release with Perlin noise support.
+- [x] Added Sink Support (Console, Debug Console, Plain Text, Image File)
 - [ ] Expand noise algorithms and add more (e.g., Simplex, Voronoi).
 - [ ] Multi-language bindings (e.g., Python, JavaScript).
 - [ ] Add 3D terrain generation.
-- [ ] Distribute via NuGet and pip.
+- [ ] Distribute via NuGet and other ways like through DLL's.
 
 ## Contributing
 If you would like to contribute, see the [CONTRIBUTING]() file for details.

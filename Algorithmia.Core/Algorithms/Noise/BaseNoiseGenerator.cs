@@ -41,5 +41,18 @@ namespace Algorithmia.Noise
             // To be overridden in specific noise generator implementations
             throw new NotImplementedException("SaveToFile is not implemented for this noise generator as this is the BaseNoiseGenerator.\nThis is to be overidden by the Noise Types.");
         }
+
+        public virtual float[,] GenerateNoiseMap(int width, int height, float scale)
+        {
+            var noiseMap = new float[height, width];
+            for (int y = 0; y < height; y++)
+            {
+                for (int x = 0; x < width; x++)
+                {
+                    noiseMap[y, x] = GetNoise(x * scale, y * scale);
+                }
+            }
+            return noiseMap;
+        }
     }
 }

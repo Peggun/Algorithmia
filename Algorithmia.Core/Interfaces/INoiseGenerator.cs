@@ -31,5 +31,6 @@ namespace Algorithmia.Interfaces
 
         void SetOutputFileType(FileTypes type);
         void SaveToFile(string filePath, int width, int height, float scale, int quality);
+        float[,] GenerateNoiseMap(int width, int height, float scale);
     }
 }
