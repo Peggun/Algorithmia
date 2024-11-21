@@ -1,17 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35506.116 d17.12
+VisualStudioVersion = 17.12.35506.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithmia.Core", "Algorithmia.Core\Algorithmia.Core.csproj", "{B8777947-3790-4276-BB3B-7FFBCF81ACE3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithmia.Core", "src\Algorithmia.Core\Algorithmia.Core.csproj", "{B8777947-3790-4276-BB3B-7FFBCF81ACE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithmia.Modules", "Algorithmia.Modules\Algorithmia.Modules.csproj", "{FB293206-EF0A-4259-9813-2213B39D87C7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithmia.Modules", "src\Algorithmia.Modules\Algorithmia.Modules.csproj", "{FB293206-EF0A-4259-9813-2213B39D87C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithmia.Visualisation", "Algorithmia.Visualisation\Algorithmia.Visualisation.csproj", "{F72C9269-CD12-45AD-8369-24F9EA298FE8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithmia.Visualisation", "src\Algorithmia.Visualisation\Algorithmia.Visualisation.csproj", "{F72C9269-CD12-45AD-8369-24F9EA298FE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithmia.Interfaces", "Algorithmia.Interfaces\Algorithmia.Interfaces.csproj", "{FB13332D-FBCA-4400-882B-C95C6F76D666}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithmia.Interfaces", "src\Algorithmia.Interfaces\Algorithmia.Interfaces.csproj", "{FB13332D-FBCA-4400-882B-C95C6F76D666}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithmia.CLI", "Algorithmia.CLI\Algorithmia.CLI.csproj", "{A0CBEA06-BB73-419F-BE3D-6DF206B057D6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithmia.CLI", "src\Algorithmia.CLI\Algorithmia.CLI.csproj", "{A0CBEA06-BB73-419F-BE3D-6DF206B057D6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{34D129D6-40C2-41FE-BCBF-8121CD0C4860}"
 EndProject
@@ -27,11 +27,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{F70AFC52
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{BFE1F269-C686-41B1-8BB3-826EB1BD9881}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithmia.CoreTests", "Algorithmia.CoreTests\Algorithmia.CoreTests.csproj", "{10AB6CF9-1BA2-4636-ADF9-0053BE358CA7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithmia.CoreTests", "tests\Algorithmia.CoreTests\Algorithmia.CoreTests.csproj", "{10AB6CF9-1BA2-4636-ADF9-0053BE358CA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithmia.ModuleTests", "Algorithmia.ModuleTests\Algorithmia.ModuleTests.csproj", "{8EFA3673-DBFB-4803-9BA1-7EC286748978}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithmia.ModuleTests", "tests\Algorithmia.ModuleTests\Algorithmia.ModuleTests.csproj", "{AF369AF7-1093-42F9-82D4-720A58183BFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithmia.Examples", "Algorithmia.Examples\Algorithmia.Examples.csproj", "{41F78388-DFE7-4C15-8547-15FB5979B327}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithmia.Examples", "examples\Algorithmia.Examples\Algorithmia.Examples.csproj", "{9880D6D2-5A38-4FC5-B9EA-F25CE64AA6F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,14 +63,14 @@ Global
 		{10AB6CF9-1BA2-4636-ADF9-0053BE358CA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10AB6CF9-1BA2-4636-ADF9-0053BE358CA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10AB6CF9-1BA2-4636-ADF9-0053BE358CA7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8EFA3673-DBFB-4803-9BA1-7EC286748978}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8EFA3673-DBFB-4803-9BA1-7EC286748978}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8EFA3673-DBFB-4803-9BA1-7EC286748978}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8EFA3673-DBFB-4803-9BA1-7EC286748978}.Release|Any CPU.Build.0 = Release|Any CPU
-		{41F78388-DFE7-4C15-8547-15FB5979B327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{41F78388-DFE7-4C15-8547-15FB5979B327}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{41F78388-DFE7-4C15-8547-15FB5979B327}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{41F78388-DFE7-4C15-8547-15FB5979B327}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF369AF7-1093-42F9-82D4-720A58183BFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF369AF7-1093-42F9-82D4-720A58183BFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF369AF7-1093-42F9-82D4-720A58183BFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF369AF7-1093-42F9-82D4-720A58183BFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9880D6D2-5A38-4FC5-B9EA-F25CE64AA6F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9880D6D2-5A38-4FC5-B9EA-F25CE64AA6F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9880D6D2-5A38-4FC5-B9EA-F25CE64AA6F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9880D6D2-5A38-4FC5-B9EA-F25CE64AA6F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -82,7 +82,7 @@ Global
 		{FB13332D-FBCA-4400-882B-C95C6F76D666} = {34D129D6-40C2-41FE-BCBF-8121CD0C4860}
 		{A0CBEA06-BB73-419F-BE3D-6DF206B057D6} = {34D129D6-40C2-41FE-BCBF-8121CD0C4860}
 		{10AB6CF9-1BA2-4636-ADF9-0053BE358CA7} = {37F3490F-3168-4CB2-B730-CEFAE25AD1E1}
-		{8EFA3673-DBFB-4803-9BA1-7EC286748978} = {37F3490F-3168-4CB2-B730-CEFAE25AD1E1}
-		{41F78388-DFE7-4C15-8547-15FB5979B327} = {D2AD33D4-6A19-4A0B-95EC-38BCACF808AD}
+		{AF369AF7-1093-42F9-82D4-720A58183BFB} = {37F3490F-3168-4CB2-B730-CEFAE25AD1E1}
+		{9880D6D2-5A38-4FC5-B9EA-F25CE64AA6F3} = {D2AD33D4-6A19-4A0B-95EC-38BCACF808AD}
 	EndGlobalSection
 EndGlobal
