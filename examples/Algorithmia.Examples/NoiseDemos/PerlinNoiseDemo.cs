@@ -10,15 +10,15 @@ namespace Algorithmia.Examples.NoiseDemos.Perlin
     /// </summary>
     public class PerlinNoiseDemo
     {
-        private const int Width = 16;
-        private const int Height = 16;
+        private const int Width = 512;
+        private const int Height = 512;
         private const float Scale = 0.01f;
 
         public static void Run()
         {
             try
             {
-                var perlinNoise = NoiseGeneratorFactory.CreateNoiseGenerator(FastNoiseLite.NoiseType.Perlin);
+                var perlinNoise = NoiseGeneratorFactory.CreateNoiseGenerator(NoiseType.Perlin);
                 perlinNoise.SetSeed(1337);
                 perlinNoise.SetFrequency(0.1f);
 
@@ -29,11 +29,11 @@ namespace Algorithmia.Examples.NoiseDemos.Perlin
 
                 var sinks = new ISink[]
                 {
-                    new ConsoleSink(),                // Output to console
+                    //new ConsoleSink(),                // Output to console
                     new ImageSink(FileTypes.PNG),     // Output to a PNG image
                     new ImageSink(FileTypes.JPEG),    // Output to a JPEG image
                     new TextFileSink(),               // Output to an text file
-                    new DebugSink(),                  // Output to debug console
+                    //new DebugSink(),                  // Output to debug console
                 };
 
                 // Use each sink

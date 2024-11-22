@@ -18,7 +18,7 @@ namespace Algorithmia.Examples.NoiseDemos
         {
             try
             {
-                var openSimplex2 = NoiseGeneratorFactory.CreateNoiseGenerator(FastNoiseLite.NoiseType.OpenSimplex2);
+                var openSimplex2 = NoiseGeneratorFactory.CreateNoiseGenerator(NoiseType.OpenSimplex2);
                 openSimplex2.SetSeed(1337);
                 openSimplex2.SetFrequency(0.1f);
 

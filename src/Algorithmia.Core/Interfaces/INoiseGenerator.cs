@@ -10,17 +10,17 @@ namespace Algorithmia.Interfaces
     {
         void SetSeed(int seed);
         void SetFrequency(float frequency);
-        void SetRotationType3D(FastNoiseLite.RotationType3D rotationType3D);
-        void SetFractalType(FastNoiseLite.FractalType fractalType);
+        void SetRotationType3D(RotationType3D rotationType3D);
+        void SetFractalType(FractalType fractalType);
         void SetFractalOctaves(int octaves);
         void SetFractalLacunarity(float lacunarity);
         void SetFractalGain(float gain);
         void SetFractalWeightedStrength(float weightedStrength);
         void SetFractalPingPongStrength(float pingPongStrength);
-        void SetCellularDistanceFunction(FastNoiseLite.CellularDistanceFunction cellularDistanceFunction);
-        void SetCellularReturnType(FastNoiseLite.CellularReturnType cellularReturnType);
+        void SetCellularDistanceFunction(CellularDistanceFunction cellularDistanceFunction);
+        void SetCellularReturnType(CellularReturnType cellularReturnType);
         void SetCellularJitter(float cellularJitter);
-        void SetDomainWarpType(FastNoiseLite.DomainWarpType domainWarpType);
+        void SetDomainWarpType(DomainWarpType domainWarpType);
         void SetDomainWarpAmp(float domainWarpAmp);
 
         float GetNoise(FNLfloat x, FNLfloat y);

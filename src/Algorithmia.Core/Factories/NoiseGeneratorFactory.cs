@@ -1,5 +1,6 @@
 ﻿using Algorithmia.Interfaces;
 using Algorithmia.Noise;
+using Algorithmia.Enums;
 
 namespace Algorithmia.Factories
 {
@@ -8,12 +9,15 @@ namespace Algorithmia.Factories
     /// </summary>
     public static class NoiseGeneratorFactory
     {
-        public static INoiseGenerator CreateNoiseGenerator(FastNoiseLite.NoiseType type) =>
+        public static INoiseGenerator CreateNoiseGenerator(NoiseType type) =>
             type switch
             {
-                FastNoiseLite.NoiseType.Perlin => new PerlinNoise(),
-                FastNoiseLite.NoiseType.OpenSimplex2 => new OpenSimplex2Noise(),
-                FastNoiseLite.NoiseType.OpenSimplex2S => new OpenSimplex2SNoise(),
+                NoiseType.Perlin => new PerlinNoise(),
+                NoiseType.OpenSimplex2 => new OpenSimplex2Noise(),
+                NoiseType.OpenSimplex2S => new OpenSimplex2SNoise(),
+                NoiseType.Cellular => new CellularNoise(),
+                NoiseType.Value => new ValueNoise(),
+                NoiseType.ValueCubic => new ValueCubicNoise(),
                 _ => throw new ArgumentException($"Unsupported noise type: {type}", nameof(type))
             };
     }
