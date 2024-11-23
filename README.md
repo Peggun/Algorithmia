@@ -78,6 +78,7 @@ catch (Exception ex)
 - [x] Initial library release with Perlin noise support.
 - [x] Added Sink Support (Console, Debug Console, Plain Text, Image File)
 - [x] Expand noise algorithms and add more (e.g., Simplex, Voronoi).
+- [ ] 2D and 3D visualisation of the Generated Maps using Avalonia (in progress)
 - [ ] Multi-language bindings (e.g., Python, JavaScript).
 - [ ] Add 3D terrain generation.
 - [ ] Distribute via NuGet and other ways like through DLL's.
