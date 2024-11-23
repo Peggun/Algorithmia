@@ -30,10 +30,12 @@ namespace Algorithmia.Examples.NoiseDemos.Perlin
                 var sinks = new ISink[]
                 {
                     //new ConsoleSink(),                // Output to console
-                    new ImageSink(FileTypes.PNG),     // Output to a PNG image
-                    new ImageSink(FileTypes.JPEG),    // Output to a JPEG image
-                    new TextFileSink(),               // Output to an text file
+                    //new ImageSink(FileTypes.PNG),     // Output to a PNG image
+                    //new ImageSink(FileTypes.JPEG),    // Output to a JPEG image
+                    //new TextFileSink(),               // Output to an text file
                     //new DebugSink(),                  // Output to debug console
+                    //new JsonSink(),                   // Output to a JSON file
+                    new CsvSink()
                 };
 
                 // Use each sink
