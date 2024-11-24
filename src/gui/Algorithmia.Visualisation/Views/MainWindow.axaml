@@ -1,0 +1,167 @@
+<Window x:Class="Algorithmia.Visualisation.Views.MainWindow"
+			 xmlns="https://github.com/avaloniaui"
+	         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+	         x:DataType="vm:MainWindowViewModel"
+	         Icon="/Assets/avalonia-logo.ico"
+             Title="Algorithmia Live Map Viewer"
+	         xmlns:vm="using:Algorithmia.Visualisation.ViewModels">
+	<Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="350" />
+			<ColumnDefinition Width="*" />
+		</Grid.ColumnDefinitions>
+
+		<!-- Sidebar -->
+		<Border Grid.Column="0" Background="#2E3B4E" Padding="10">
+			<ScrollViewer>
+				<StackPanel Spacing="20">
+					<!-- General Section -->
+					<StackPanel>
+						<TextBlock Text="General" Foreground="White" FontSize="16" FontWeight="Bold" />
+
+						<StackPanel Margin="0,10,0,0" Spacing="10">
+							<!-- Noise Type -->
+							<StackPanel>
+								<TextBlock Text="Noise Type" Foreground="White" FontSize="14" />
+								<ComboBox Name="NoiseTypeDropdown" SelectedIndex="0" Width="300">
+									<ComboBoxItem Content="Perlin" />
+									<ComboBoxItem Content="OpenSimplex2" />
+									<ComboBoxItem Content="OpenSimplex2S" />
+									<ComboBoxItem Content="Cellular" />
+									<ComboBoxItem Content="Value" />
+									<ComboBoxItem Content="ValueCubic" />
+								</ComboBox>
+							</StackPanel>
+
+							<!-- Rotation Type 3D -->
+							<StackPanel>
+								<TextBlock Text="Rotation Type 3D" Foreground="White" FontSize="14" />
+								<ComboBox Name="Rotation3DDropdown" Width="300">
+									<ComboBoxItem Content="None" />
+									<ComboBoxItem Content="X-Axis" />
+									<ComboBoxItem Content="Y-Axis" />
+									<ComboBoxItem Content="Z-Axis" />
+								</ComboBox>
+							</StackPanel>
+
+							<!-- Seed -->
+							<StackPanel>
+								<TextBlock Text="Seed" Foreground="White" FontSize="14" />
+								<TextBox Name="SeedInput" Width="300" />
+							</StackPanel>
+
+							<!-- Frequency -->
+							<StackPanel>
+								<TextBlock Text="Frequency" Foreground="White" FontSize="14" />
+								<Slider Name="FrequencySlider" Minimum="0.1" Maximum="10" Value="1" TickFrequency="0.1" Width="300"/>
+								<TextBlock Text="Value: 1.0" Name="FrequencyValue" Foreground="Gray" FontSize="12" />
+							</StackPanel>
+						</StackPanel>
+					</StackPanel>
+
+					<!-- Fractal Section -->
+					<StackPanel>
+						<TextBlock Text="Fractal" Foreground="White" FontSize="16" FontWeight="Bold" />
+
+						<StackPanel Margin="0,10,0,0" Spacing="10">
+							<!-- Type -->
+							<StackPanel>
+								<TextBlock Text="Type" Foreground="White" FontSize="14" />
+								<ComboBox Name="FractalTypeDropdown" Width="300">
+									<ComboBoxItem Content="FBM" />
+									<ComboBoxItem Content="Ridged" />
+									<ComboBoxItem Content="PingPong" />
+								</ComboBox>
+							</StackPanel>
+
+							<!-- Octaves -->
+							<StackPanel>
+								<TextBlock Text="Octaves" Foreground="White" FontSize="14" />
+								<Slider Name="OctavesSlider" Minimum="1" Maximum="10" Value="1" TickFrequency="1" Width="300"  />
+								<TextBlock Text="Value: 1" Name="OctavesValue" Foreground="Gray" FontSize="12" />
+							</StackPanel>
+
+							<!-- Lacunarity -->
+							<StackPanel>
+								<TextBlock Text="Lacunarity" Foreground="White" FontSize="14" />
+								<Slider Name="LacunaritySlider" Minimum="1" Maximum="5" Value="2" TickFrequency="0.1" Width="300" />
+								<TextBlock Text="Value: 2.0" Name="LacunarityValue" Foreground="Gray" FontSize="12" />
+							</StackPanel>
+
+							<!-- Gain -->
+							<StackPanel>
+								<TextBlock Text="Gain" Foreground="White" FontSize="14" />
+								<Slider Name="GainSlider" Minimum="0.1" Maximum="2" Value="1" TickFrequency="0.1" Width="300" />
+								<TextBlock Text="Value: 1.0" Name="GainValue" Foreground="Gray" FontSize="12" />
+							</StackPanel>
+
+							<!-- Weighted Strength -->
+							<StackPanel>
+								<TextBlock Text="Weighted Strength" Foreground="White" FontSize="14" />
+								<Slider Name="WeightedStrengthSlider" Minimum="0" Maximum="1" Value="0.5" TickFrequency="0.1" Width="300" />
+								<TextBlock Text="Value: 0.5" Name="WeightedStrengthValue" Foreground="Gray" FontSize="12" />
+							</StackPanel>
+
+							<!-- Ping Pong Strength -->
+							<StackPanel>
+								<TextBlock Text="Ping Pong Strength" Foreground="White" FontSize="14" />
+								<Slider Name="PingPongStrengthSlider" Minimum="0" Maximum="5" Value="0" TickFrequency="0.1" Width="300" />
+								<TextBlock Text="Value: 0" Name="PingPongStrengthValue" Foreground="Gray" FontSize="12" />
+							</StackPanel>
+						</StackPanel>
+					</StackPanel>
+
+					<!-- Cellular Section -->
+					<StackPanel>
+						<TextBlock Text="Cellular" Foreground="White" FontSize="16" FontWeight="Bold" />
+
+						<StackPanel Margin="0,10,0,0" Spacing="10">
+							<!-- Distance Function -->
+							<StackPanel>
+								<TextBlock Text="Distance Function" Foreground="White" FontSize="14" />
+								<ComboBox Name="DistanceFunctionDropdown" Width="300" >
+									<ComboBoxItem Content="Euclidean" />
+									<ComboBoxItem Content="Manhattan" />
+									<ComboBoxItem Content="Natural" />
+								</ComboBox>
+							</StackPanel>
+
+							<!-- Return Type -->
+							<StackPanel>
+								<TextBlock Text="Return Type" Foreground="White" FontSize="14" />
+								<ComboBox Name="ReturnTypeDropdown" Width="300" >
+									<ComboBoxItem Content="Cell Value" />
+									<ComboBoxItem Content="Distance" />
+								</ComboBox>
+							</StackPanel>
+
+							<!-- Jitter -->
+							<StackPanel>
+								<TextBlock Text="Jitter" Foreground="White" FontSize="14" />
+								<Slider Name="JitterSlider" Minimum="0" Maximum="1" Value="0.5" TickFrequency="0.1" Width="300" />
+								<TextBlock Text="Value: 0.5" Name="JitterValue" Foreground="Gray" FontSize="12" />
+							</StackPanel>
+						</StackPanel>
+					</StackPanel>
+				</StackPanel>
+			</ScrollViewer>
+		</Border>
+
+		<!-- Map Display Area -->
+		<Border Grid.Column="1" Background="#1E1E1E" BorderThickness="2" BorderBrush="#007ACC">
+			<TextBlock Text="Map Display Area" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" />
+		</Border>
+	</Grid>
+
+
+</Window>

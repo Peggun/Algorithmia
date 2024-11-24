@@ -10,8 +10,8 @@ namespace Algorithmia.Examples.NoiseDemos.Perlin
     /// </summary>
     public class PerlinNoiseDemo
     {
-        private const int Width = 512;
-        private const int Height = 512;
+        private const int Width = 16;
+        private const int Height = 16;
         private const float Scale = 0.01f;
 
         public static void Run()
@@ -35,7 +35,7 @@ namespace Algorithmia.Examples.NoiseDemos.Perlin
                     //new TextFileSink(),               // Output to an text file
                     //new DebugSink(),                  // Output to debug console
                     //new JsonSink(),                   // Output to a JSON file
-                    new CsvSink()
+                    new CsvSink()                     // Output to a CSV file (kinda needs fixing a little)
                 };
 
                 // Use each sink
