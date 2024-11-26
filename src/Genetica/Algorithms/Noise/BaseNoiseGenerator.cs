@@ -6,17 +6,26 @@ using Genetica;
 namespace Genetica
 {
     /// <summary>
-    /// Base class for noise generation. Implements common FastNoiseLite functionality.
+    /// Base class for noise generation. Implements common FastNoiseLite functionality and other functions required for custom noises
     /// </summary>
     public abstract class BaseNoiseGenerator : INoiseGenerator
     {
+        // These are for the non-FastNoiseLite noise functions
+        protected int _seed { get; set; } = 12345;
+
+
         protected readonly FastNoiseLite Noise;
         protected FileTypes OutputFileType { get; private set; } = FileTypes.PNG;
 
         protected BaseNoiseGenerator() => Noise = new FastNoiseLite();
 
         public virtual void SetFrequency(float frequency) => Noise.SetFrequency(frequency);
-        public virtual void SetSeed(int seed) => Noise.SetSeed(seed);
+        public virtual void SetSeed(int seed)
+        {
+            Noise.SetSeed(seed);
+            _seed = seed;
+        }
+
         public virtual void SetRotationType3D(RotationType3D rotationType3D) => Noise.SetRotationType3D(MapToFastNoiseLite(rotationType3D));
         public virtual void SetFractalType(FractalType fractalType) => Noise.SetFractalType(MapToFastNoiseLite(fractalType));
         public virtual void SetFractalOctaves(int octaves) => Noise.SetFractalOctaves(octaves);

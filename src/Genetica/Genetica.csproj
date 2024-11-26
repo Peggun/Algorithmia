@@ -16,6 +16,7 @@
 	  <PackageProjectUrl>https://github.com/Peggun/Genetica</PackageProjectUrl>
 	  <RepositoryUrl>https://github.com/Peggun/Genetica</RepositoryUrl>
 	  <IsPreRelease>true</IsPreRelease>
+	  <EnablePackageValidation>true</EnablePackageValidation>
 	  
   </PropertyGroup>
 

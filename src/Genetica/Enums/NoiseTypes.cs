@@ -7,6 +7,7 @@
         Cellular,
         Perlin,
         ValueCubic,
-        Value
+        Value,
+        White
     }
 }

@@ -22,6 +22,7 @@ public static class NoiseGeneratorFactory
             NoiseType.Cellular => new CellularNoise(),
             NoiseType.Value => new ValueNoise(),
             NoiseType.ValueCubic => new ValueCubicNoise(),
+            NoiseType.White => new WhiteNoise(),
             _ => throw new ArgumentException($"Unsupported noise type: {type}", nameof(type))
         };
 }

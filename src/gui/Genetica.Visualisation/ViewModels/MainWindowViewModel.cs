@@ -42,6 +42,8 @@ namespace Genetica.Visualisation.ViewModels
 
         public event PropertyChangedEventHandler? PropertyChanged;
 
+        public bool IsCellularNoiseSelected => SelectedNoiseTypeIndex == NoiseType.Cellular;
+
         public MainWindowViewModel()
         {
             _noise = NoiseGeneratorFactory.CreateNoiseGenerator(NoiseType.Perlin);
@@ -53,14 +55,21 @@ namespace Genetica.Visualisation.ViewModels
             };
             UpdateMap(); // Generate initial map
         }
+       
 
+        // Update OnPropertyChanged to include the computed property
         protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
-            if (propertyName != nameof(GeneratedMapImage)) // Avoid recursion
+            if (propertyName == nameof(SelectedNoiseTypeIndex))
             {
-                // Reset debounce timer on any relevant property change
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(IsCellularNoiseSelected)));
+            }
+
+            // Reset debounce timer on any relevant property change
+            if (propertyName != nameof(GeneratedMapImage))
+            {
                 _debounceTimer.Stop();
                 _debounceTimer.Start();
             }

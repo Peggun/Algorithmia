@@ -16,7 +16,7 @@ namespace Genetica.Examples.NoiseDemos.Perlin
         {
             try
             {
-                var perlinNoise = NoiseGeneratorFactory.CreateNoiseGenerator(NoiseType.Perlin);
+                var perlinNoise = NoiseGeneratorFactory.CreateNoiseGenerator(NoiseType.White);
                 perlinNoise.SetSeed(1337);
                 perlinNoise.SetFrequency(0.1f);
 
@@ -33,7 +33,7 @@ namespace Genetica.Examples.NoiseDemos.Perlin
                     //new TextFileSink(),               // Output to an text file
                     //new DebugSink(),                  // Output to debug console
                     //new JsonSink(),                   // Output to a JSON file
-                    new CsvSink()                     // Output to a CSV file (kinda needs fixing a little)
+                    //new CsvSink()                     // Output to a CSV file (kinda needs fixing a little)
                 };
 
                 // Use each sink
