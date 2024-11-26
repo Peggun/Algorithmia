@@ -6,7 +6,7 @@ A fast, flexible, and cross-platform world generation library for C# and other l
 
 ---
 ## Releases
-Version v0.1.0-alpha for Algorithmia's UI has been released! Feel free to check it out, request improvements or report bugs. You can find it underneath the [Releases](https://github.com/Peggun/Algorithmia/releases) tab.
+Version v0.1.0-alpha for Algorithmia's UI has been released! Feel free to check it out, request improvements or report bugs. You can find it underneath the [Releases](https://github.com/Peggun/Genetica/releases) tab.
 The Version v0.1.0-alpha for Algorithmia NuGet package is being a work in progress, and should be released soon.
 
 ## Table of Contents
@@ -26,7 +26,7 @@ The Version v0.1.0-alpha for Algorithmia NuGet package is being a work in progre
 - 📦 **Lightweight and Optimized:** Minimal dependencies for fast execution.
 
 ## Benchmarks
-If you would like to see the initial benchmarks of this program there are 75 benchmarks in [Benchmarks](https://github.com/Peggun/Algorithmia/blob/main/Benchmarks.md)
+If you would like to see the initial benchmarks of this program there are 75 benchmarks in [Benchmarks](https://github.com/Peggun/Genetica/blob/main/Benchmarks.md)
 
 ## Example
 **C# Example**
@@ -35,7 +35,6 @@ If you would like to see the initial benchmarks of this program there are 75 ben
         Algorithm for generating a gray scale PNG image of a Perlin Noise Generation Map
 */
 
-// These are for now. Will slim them down later.
 using Genetica;
 using Genetica.Sinks;
 
@@ -87,13 +86,13 @@ catch (Exception ex)
 - [ ] Distribute via NuGet and other ways like through DLL's.
 
 ## Contributing
-If you would like to contribute, see the [CONTRIBUTING](https://github.com/Peggun/Algorithmia/blob/main/CONTRIBUTING.md) file for details.
+If you would like to contribute, see the [CONTRIBUTING](https://github.com/Peggun/Genetica/blob/main/CONTRIBUTING.md) file for details.
 
 ## Documentation
 If you need some help getting started using this library, please start off by reading the [FastNoiseLite documentation](https://github.com/Auburn/FastNoiseLite/wiki/Documentation).
 
 ## License
-This project is licensed under the GNU License. See the [LICENSE](https://github.com/Peggun/Algorithmia/blob/main/LICENSE) file for details.
+This project is licensed under the GNU License. See the [LICENSE](https://github.com/Peggun/Genetica/blob/main/LICENSE) file for details.
 
 ---
 
