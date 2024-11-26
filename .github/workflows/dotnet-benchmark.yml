@@ -1,15 +1,13 @@
-name: .NET CI
+name: .NET Benchmark
 
 on:
+  workflow_dispatch:  # Allows manual triggering
   push:
     branches:
-      - main
-  pull_request:
-    branches:
-      - main
+      - main  # Optional: only run benchmarks on `main`
 
 jobs:
-  build:
+  benchmark:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,16 +17,10 @@ jobs:
     - name: Set up .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '9.0'  # or whatever version you are using
+        dotnet-version: '9.0'
 
     - name: Restore dependencies
       run: dotnet restore
-
-    - name: Build the project
-      run: dotnet build --configuration Release
-
-    - name: Run unit tests
-      run: dotnet test --configuration Release
 
     - name: Run Benchmark
       run: dotnet run --project tests/Algorithmia.Benchmarks -c Release
