@@ -23,18 +23,26 @@ public class ImageSink : ISink
         int height = noiseData.GetLength(0);
         int width = noiseData.GetLength(1);
 
-        // Create a bitmap and populate it with noise data
-        using var bitmap = new SKBitmap(width, height);
-        for (int y = 0; y < height; y++)
-        {
-            for (int x = 0; x < width; x++)
-            {
-                // Normalize the noise value to [0, 255]
-                float noiseValue = noiseData[y, x];
-                int intensity = Math.Clamp((int)((noiseValue + 1) * 127.5f), 0, 255);
+        var bitmap = new SKBitmap(width, height, SKColorType.Rgba8888, SKAlphaType.Premul);
 
-                // Assign a grayscale color based on intensity
-                bitmap.SetPixel(x, y, new SKColor((byte)intensity, (byte)intensity, (byte)intensity));
+        var pixels = bitmap.GetPixels();
+
+        unsafe
+        {
+            byte* ptr = (byte*)pixels.ToPointer();
+            for (int y = 0; y < height; y++)
+            {
+                for (int x = 0; x < width; x++)
+                {
+                    float noiseValue = noiseData[y, x];
+                    int intensity = Math.Clamp((int)((noiseValue + 1) * 127.5f), 0, 255);
+
+                    int index = (y * width + x) * 4; // 4 bytes per pixel (RGBA)
+                    ptr[index] = (byte)intensity;       // Red
+                    ptr[index + 1] = (byte)intensity;  // Green
+                    ptr[index + 2] = (byte)intensity;  // Blue
+                    ptr[index + 3] = 255;              // Alpha
+                }
             }
         }
 

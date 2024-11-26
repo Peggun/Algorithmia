@@ -1,6 +1,8 @@
 # Algorithmia
 A fast, flexible, and cross-platform world generation library for C# and other languages. Built for speed and versatility, `Algorithmia` enables developers to create procedurally generated 2D and 3D worlds efficiently, whether for games, simulations, or creative tools.
 
+![Build Status](https://img.shields.io/github/actions/workflow/status/Peggun/Algorithmia/ci.yml)
+
 ---
 
 ## Table of Contents
@@ -19,17 +21,14 @@ A fast, flexible, and cross-platform world generation library for C# and other l
 - 🔄 **Cross-Language Support:** Precompiled bindings for Python, C#, and more.
 - 📦 **Lightweight and Optimized:** Minimal dependencies for fast execution.
 
-## Installation
-**C# Installation**
-
-## Usage
+## Benchmarks
+If you would like to see the initial benchmarks of this program there are 75 benchmarks in [Benchmarks](https://github.com/Peggun/Algorithima/blob/main/Benchmarks.md)
 
 ## Example
 **C# Example**
 ```cs
 /* 
         Algorithm for generating a gray scale PNG image of a Perlin Noise Generation Map
-        Uses SkiaSharp for the drawing of the Grayscale Images
 */
 
 // These are for now. Will slim them down later.
@@ -60,6 +59,8 @@ try
         new ImageSink(FileTypes.PNG),     // Output to an image (you now define the Image Type in here)
         new TextFileSink(),               // Output to an text file
         new DebugSink(),                  // Output to debug console
+        new JsonSink(),                   // Output to a JSON file
+        new CsvSink(),                    // Output to a CSV file
     };
 
     // Use each sink
@@ -78,19 +79,19 @@ catch (Exception ex)
 - [x] Initial library release with Perlin noise support.
 - [x] Added Sink Support (Console, Debug Console, Plain Text, Image File)
 - [x] Expand noise algorithms and add more (e.g., Simplex, Voronoi).
-- [ ] 2D and 3D visualisation of the Generated Maps using Avalonia (in progress)
+- [x] Visualisation of the Generated Maps using Avalonia (in progress)
 - [ ] Multi-language bindings (e.g., Python, JavaScript).
 - [ ] Add 3D terrain generation.
 - [ ] Distribute via NuGet and other ways like through DLL's.
 
 ## Contributing
-If you would like to contribute, see the [CONTRIBUTING]() file for details.
+If you would like to contribute, see the [CONTRIBUTING](https://github.com/Peggun/Algorithmia/blob/main/CONTRIBUTING.md) file for details.
 
 ## Documentation
 If you need some help getting started using this library, please start off by reading the [FastNoiseLite documentation](https://github.com/Auburn/FastNoiseLite/wiki/Documentation).
 
 ## License
-This project is licensed under the GNU License. See the [LICENSE]() file for details.
+This project is licensed under the GNU License. See the [LICENSE](https://github.com/Peggun/Algorithmia/blob/main/LICENSE) file for details.
 
 ---
 
