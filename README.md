@@ -23,7 +23,7 @@ A fast, flexible, and cross-platform world generation library for C# and other l
 - 📦 **Lightweight and Optimized:** Minimal dependencies for fast execution.
 
 ## Benchmarks
-If you would like to see the initial benchmarks of this program there are 75 benchmarks in [Benchmarks](https://github.com/Peggun/Algorithima/blob/main/Benchmarks.md)
+If you would like to see the initial benchmarks of this program there are 75 benchmarks in [Benchmarks](https://github.com/Peggun/Algorithmia/blob/main/Benchmarks.md)
 
 ## Example
 **C# Example**
