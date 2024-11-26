@@ -5,6 +5,9 @@ A fast, flexible, and cross-platform world generation library for C# and other l
 ![Benchmarks Status](https://img.shields.io/github/actions/workflow/status/Peggun/Algorithmia/dotnet-benchmark.yml?label=Benchmarks)
 
 ---
+## Releases
+Version v0.1.0-alpha for Algorithmia's UI has been released! Feel free to check it out, request improvements or report bugs. You can find it underneath the [Releases](https://github.com/Peggun/Algorithmia/releases) tab.
+The Version v0.1.0-alpha for Algorithmia NuGet package is being a work in progress, and should be released soon.
 
 ## Table of Contents
 1. [Features](#features)
