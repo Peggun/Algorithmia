@@ -1,0 +1,191 @@
+<Window x:Class="Algorithmia.Visualisation.Views.MainWindow"
+        xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Algorithmia.Visualisation.ViewModels"
+		x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Algorithmia Live Map Viewer">
+	<Window.DataContext>
+		<vm:MainWindowViewModel/>
+	</Window.DataContext>
+
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="350"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+
+		<!-- Sidebar -->
+		<Border Grid.Column="0" Background="#2E3B4E" Padding="10">
+			<ScrollViewer>
+				<StackPanel Spacing="20">
+					<!-- General Section -->
+					<StackPanel>
+						<TextBlock Text="General" Foreground="White" FontSize="16" FontWeight="Bold"/>
+						<StackPanel Margin="0,10,0,0" Spacing="10">
+							<!-- Noise Type -->
+							<StackPanel>
+								<TextBlock Text="Noise Type" Foreground="White" FontSize="14"/>
+								<ComboBox SelectedIndex="{Binding SelectedNoiseTypeIndex}" Width="300">
+									<ComboBoxItem Content="OpenSimplex2"/>
+									<ComboBoxItem Content="OpenSimplex2S"/>
+									<ComboBoxItem Content="Cellular"/>
+									<ComboBoxItem Content="Perlin"/>
+									<ComboBoxItem Content="ValueCubic"/>
+									<ComboBoxItem Content="Value"/>
+								</ComboBox>
+							</StackPanel>
+
+							<!-- Rotation Type 3D -->
+							<StackPanel>
+								<TextBlock Text="Rotation Type 3D" Foreground="White" FontSize="14"/>
+								<ComboBox SelectedIndex="{Binding SelectedRotationTypeIndex}" Width="300">
+									<ComboBoxItem Content="None"/>
+									<ComboBoxItem Content="ImproveXYPlanes"/>
+									<ComboBoxItem Content="ImproveXZPlanes"/>
+								</ComboBox>
+							</StackPanel>
+
+							<!-- Seed -->
+							<StackPanel>
+								<TextBlock Text="Seed" Foreground="White" FontSize="14"/>
+								<TextBox Text="{Binding Seed}" Width="300"/>
+							</StackPanel>
+
+							<!-- Frequency -->
+							<StackPanel>
+								<TextBlock Text="Frequency" Foreground="White" FontSize="14"/>
+								<Slider Minimum="0.1" Maximum="1" TickFrequency="0.1"
+                                        Width="300" Value="{Binding Frequency}"/>
+								<TextBlock Text="{Binding Frequency, StringFormat=Value: {0:F1}}"
+                                           Foreground="Gray" FontSize="12"/>
+							</StackPanel>
+
+							<!-- Scale -->
+							<StackPanel>
+								<TextBlock Text="Scale" Foreground="White" FontSize="14"/>
+								<Slider Minimum="0.01" Maximum="1" TickFrequency="0.01"
+                                        Width="300" Value="{Binding Scale}"/>
+								<TextBlock Text="{Binding Scale, StringFormat=Value: {0:F2}}"
+                                           Foreground="Gray" FontSize="12"/>
+							</StackPanel>
+						</StackPanel>
+					</StackPanel>
+
+					<!-- Fractal Section -->
+					<StackPanel>
+						<TextBlock Text="Fractal" Foreground="White" FontSize="16" FontWeight="Bold"/>
+						<StackPanel Margin="0,10,0,0" Spacing="10">
+							<!-- Type -->
+							<StackPanel>
+								<TextBlock Text="Type" Foreground="White" FontSize="14"/>
+								<ComboBox SelectedIndex="{Binding SelectedFractalTypeIndex}" Width="300">
+									<ComboBoxItem Content="FBm"/>
+									<ComboBoxItem Content="Ridged"/>
+									<ComboBoxItem Content="PingPong"/>
+									<ComboBoxItem Content="DomainWarpProgressive"/>
+									<ComboBoxItem Content="DomainWarpIndependent"/>
+								</ComboBox>
+							</StackPanel>
+
+							<!-- Octaves -->
+							<StackPanel>
+								<TextBlock Text="Octaves" Foreground="White" FontSize="14"/>
+								<Slider Minimum="1" Maximum="10" TickFrequency="1" Width="300"
+                                        Value="{Binding Octaves}"/>
+								<TextBlock Text="{Binding Octaves, StringFormat=Value: {0:F0}}"
+                                           Foreground="Gray" FontSize="12"/>
+							</StackPanel>
+
+							<!-- Lacunarity -->
+							<StackPanel>
+								<TextBlock Text="Lacunarity" Foreground="White" FontSize="14"/>
+								<Slider Minimum="1" Maximum="5" TickFrequency="0.1" Width="300"
+                                        Value="{Binding Lacunarity}"/>
+								<TextBlock Text="{Binding Lacunarity, StringFormat=Value: {0:F1}}"
+                                           Foreground="Gray" FontSize="12"/>
+							</StackPanel>
+
+							<!-- Gain -->
+							<StackPanel>
+								<TextBlock Text="Gain" Foreground="White" FontSize="14"/>
+								<Slider Minimum="0.1" Maximum="2" TickFrequency="0.1" Width="300"
+                                        Value="{Binding Gain}"/>
+								<TextBlock Text="{Binding Gain, StringFormat=Value: {0:F1}}"
+                                           Foreground="Gray" FontSize="12"/>
+							</StackPanel>
+
+							<!-- Weighted Strength -->
+							<StackPanel>
+								<TextBlock Text="Weighted Strength" Foreground="White" FontSize="14"/>
+								<Slider Minimum="0" Maximum="1" TickFrequency="0.1" Width="300"
+                                        Value="{Binding WeightedStrength}"/>
+								<TextBlock Text="{Binding WeightedStrength, StringFormat=Value: {0:F1}}"
+                                           Foreground="Gray" FontSize="12"/>
+							</StackPanel>
+
+							<!-- Ping Pong Strength -->
+							<StackPanel>
+								<TextBlock Text="Ping Pong Strength" Foreground="White" FontSize="14"/>
+								<Slider Minimum="0" Maximum="5" TickFrequency="0.1" Width="300"
+                                        Value="{Binding PingPongStrength}"/>
+								<TextBlock Text="{Binding PingPongStrength, StringFormat=Value: {0:F1}}"
+                                           Foreground="Gray" FontSize="12"/>
+							</StackPanel>
+						</StackPanel>
+					</StackPanel>
+
+					<!-- Cellular Section -->
+					<StackPanel>
+						<TextBlock Text="Cellular" Foreground="White" FontSize="16" FontWeight="Bold"/>
+						<StackPanel Margin="0,10,0,0" Spacing="10">
+							<!-- Distance Function -->
+							<StackPanel>
+								<TextBlock Text="Distance Function" Foreground="White" FontSize="14"/>
+								<ComboBox SelectedIndex="{Binding SelectedDistanceFunctionIndex}" Width="300">
+									<ComboBoxItem Content="Euclidean"/>
+									<ComboBoxItem Content="EuclideanSq"/>
+									<ComboBoxItem Content="Manhattan"/>
+									<ComboBoxItem Content="Hybrid"/>
+								</ComboBox>
+							</StackPanel>
+
+							<!-- Return Type -->
+							<StackPanel>
+								<TextBlock Text="Return Type" Foreground="White" FontSize="14"/>
+								<ComboBox SelectedIndex="{Binding SelectedReturnTypeIndex}" Width="300">
+									<ComboBoxItem Content="Cell Value"/>
+									<ComboBoxItem Content="Distance"/>
+									<ComboBoxItem Content="Distance2"/>
+									<ComboBoxItem Content="Distance2Add"/>
+									<ComboBoxItem Content="Distance2Sub"/>
+									<ComboBoxItem Content="Distance2Mul"/>
+									<ComboBoxItem Content="Distance2Div"/>
+								</ComboBox>
+							</StackPanel>
+
+							<!-- Jitter -->
+							<StackPanel>
+								<TextBlock Text="Jitter" Foreground="White" FontSize="14"/>
+								<Slider Minimum="0" Maximum="1" TickFrequency="0.1" Width="300"
+                                        Value="{Binding Jitter}"/>
+								<TextBlock Text="{Binding Jitter, StringFormat=Value: {0:F1}}"
+                                           Foreground="Gray" FontSize="12"/>
+							</StackPanel>
+							<StackPanel>
+								<TextBlock>v0.1.0-alpha</TextBlock>
+							</StackPanel>
+						</StackPanel>
+					</StackPanel>
+				</StackPanel>
+			</ScrollViewer>
+		</Border>
+
+		<!-- Map Display Area -->
+		<Border Grid.Column="1" Background="#1E1E1E" BorderThickness="2" BorderBrush="#007ACC">
+			<Grid SizeChanged="OnMapDisplaySizeChanged">
+				<Image Source="{Binding GeneratedMapImage}" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+			</Grid>
+		</Border>
+	</Grid>
+</Window>

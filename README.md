@@ -1,8 +1,8 @@
-# Algorithmia
-A fast, flexible, and cross-platform world generation library for C# and other languages. Built for speed and versatility, `Algorithmia` enables developers to create procedurally generated 2D and 3D worlds efficiently, whether for games, simulations, or creative tools.
+# Genetica (formally known as Algorithmia)
+A fast, flexible, and cross-platform world generation library for C# and other languages. Built for speed and versatility, `Genetica` enables developers to create procedurally generated 2D and 3D worlds efficiently, whether for games, simulations, or creative tools.
 
-![Build Status](https://img.shields.io/github/actions/workflow/status/Peggun/Algorithmia/dotnet-build-test.yml)
-![Benchmarks Status](https://img.shields.io/github/actions/workflow/status/Peggun/Algorithmia/dotnet-benchmark.yml?label=Benchmarks)
+![Build Status](https://img.shields.io/github/actions/workflow/status/Peggun/Genetica/dotnet-build-test.yml)
+![Benchmarks Status](https://img.shields.io/github/actions/workflow/status/Peggun/Genetica/dotnet-benchmark.yml?label=Benchmarks)
 
 ---
 ## Releases
@@ -36,10 +36,8 @@ If you would like to see the initial benchmarks of this program there are 75 ben
 */
 
 // These are for now. Will slim them down later.
-using Algorithmia.Factories;
-using Algorithmia.Enums;
-using Algorithmia.Interfaces;
-using Algorithmia.Sinks;
+using Genetica;
+using Genetica.Sinks;
 
 private const int Width = 512;
 private const int Height = 512;

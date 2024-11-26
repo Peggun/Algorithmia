@@ -1,4 +1,4 @@
-# Contributing to Algorithmia: World Generation Library 🌍
+# Contributing to Genetica: World Generation Library 🌍
 First off, thanks for considering contributing to this project! Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Here are some guidelines to help you get started.
 
 ## Ways to Contribute
@@ -13,13 +13,13 @@ There are several ways to contribute to the project:
 
 ## Getting started
 ### 1. Fork the Repository
-Start by creating your own copy of the repository. Click the **Fork** button at the top of the [GitHub Page](https://github.com/Peggun/Algorithmia).
+Start by creating your own copy of the repository. Click the **Fork** button at the top of the [GitHub Page](https://github.com/Peggun/Geneticaa).
 
 ### 2. Clone the Repository
 Clone your forked repository to your local machine.
 
 ```bash
-git clone https://github.com/yourusername/algorithmia.git
+git clone https://github.com/yourusername/genetica.git
 cd recolonisation
 ```
 
@@ -61,7 +61,7 @@ If you find a bug, please open an issue with:
 - Steps to reproduce the issue
 - Any relevant error messages or logs.
 
-You can submit issues via the [Github Issues Page](https://github.com/Peggun/Algorithmia/issues)
+You can submit issues via the [Github Issues Page](https://github.com/Peggun/Genetica/issues)
 
 ## Feature Requests
 Have an idea for a feature? We'd love to hear it! Open an issue with:
@@ -75,4 +75,4 @@ This project adheres to a Code of Conduct. By participating, you agree to uphold
 ## Need Help?
 If you have any questions, feel free to open an issue or reach out via the Discussions tab.
 
-Thank you for contributing to Algorithmia! 🚀 
+Thank you for contributing to Genetica! 🚀 
