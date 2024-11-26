@@ -1,9 +1,9 @@
 using System.Timers;
 using Avalonia.Controls;
-using Algorithmia.Visualisation.ViewModels;
+using Genetica.Visualisation.ViewModels;
 using Avalonia.Threading;
 
-namespace Algorithmia.Visualisation.Views
+namespace Genetica.Visualisation.Views
 {
     public partial class MainWindow : Window
     {

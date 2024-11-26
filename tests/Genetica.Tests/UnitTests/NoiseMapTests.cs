@@ -1,11 +1,11 @@
-﻿using Algorithmia;
+﻿using Genetica;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Algorithmia.Tests.UnitTests
+namespace Genetica.Tests.UnitTests
 {
     public class NoiseMapTests
     {

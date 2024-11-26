@@ -1,7 +1,7 @@
 ﻿using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Running;
 
-namespace Algorithmia.Benchmarks;
+namespace Genetica.Benchmarks;
 
 [MarkdownExporter]
 public class Program

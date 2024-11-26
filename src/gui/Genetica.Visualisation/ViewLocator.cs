@@ -1,9 +1,9 @@
-using Algorithmia.Visualisation.ViewModels;
+using Genetica.Visualisation.ViewModels;
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
 using System;
 
-namespace Algorithmia.Visualisation
+namespace Genetica.Visualisation
 {
     public class ViewLocator : IDataTemplate
     {

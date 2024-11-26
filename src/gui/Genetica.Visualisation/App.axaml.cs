@@ -1,5 +1,5 @@
-using Algorithmia.Visualisation.ViewModels;
-using Algorithmia.Visualisation.Views;
+using Genetica.Visualisation.ViewModels;
+using Genetica.Visualisation.Views;
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Data.Core;
@@ -7,7 +7,7 @@ using Avalonia.Data.Core.Plugins;
 using Avalonia.Markup.Xaml;
 using System.Linq;
 
-namespace Algorithmia.Visualisation
+namespace Genetica.Visualisation
 {
     public partial class App : Application
     {

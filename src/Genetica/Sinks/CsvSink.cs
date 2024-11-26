@@ -4,9 +4,9 @@ using System.Globalization;
 using CsvHelper.Configuration;
 using CsvHelper;
 
-using Algorithmia;
+using Genetica;
 
-namespace Algorithmia.Sinks;
+namespace Genetica.Sinks;
 
 
 /// <summary>

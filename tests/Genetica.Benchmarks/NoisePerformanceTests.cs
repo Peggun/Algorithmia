@@ -1,8 +1,8 @@
-﻿using Algorithmia;
+﻿using Genetica;
 using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Running;
 
-namespace Algorithmia.Benchmarks
+namespace Genetica.Benchmarks
 {
     [MemoryDiagnoser] // Adds memory diagnostics to the benchmark results
     public class NoisePerformanceTests

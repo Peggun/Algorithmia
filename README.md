@@ -7,7 +7,7 @@ A fast, flexible, and cross-platform world generation library for C# and other l
 ---
 ## Releases
 Version v0.1.0-alpha for Genetica's UI has been released! Feel free to check it out, request improvements or report bugs. You can find it underneath the [Releases](https://github.com/Peggun/Genetica/releases) tab.
-The Version v0.1.0-alpha for Genetica NuGet package is being a work in progress, and should be released soon.
+The Version v0.1.0-alpha for Genetica NuGet package has been released! Feel free to download and use it and request improvements or report bugs. You can find it [here](https://www.nuget.org/packages/Genetica/0.1.0-alpha)
 
 ## Table of Contents
 1. [Features](#features)

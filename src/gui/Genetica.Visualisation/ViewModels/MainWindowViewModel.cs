@@ -3,7 +3,7 @@ using Avalonia.Threading;
 
 using SkiaSharp;
 
-using Algorithmia;
+using Genetica;
 
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -12,7 +12,7 @@ using System;
 using System.Timers;
 using System.Diagnostics;
 
-namespace Algorithmia.Visualisation.ViewModels
+namespace Genetica.Visualisation.ViewModels
 {
     public class MainWindowViewModel : INotifyPropertyChanged
     {

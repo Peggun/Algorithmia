@@ -1,7 +1,7 @@
-﻿using Algorithmia;
+﻿using Genetica;
 using SkiaSharp;
 
-namespace Algorithmia.Sinks;
+namespace Genetica.Sinks;
 
 /// <summary>
 /// Sink to write to an image file

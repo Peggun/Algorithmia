@@ -1,6 +1,6 @@
 ﻿using FNLfloat = System.Single;
 
-namespace Algorithmia
+namespace Genetica
 {
     /// <summary>
     /// Interface for all noise generators. Encapsulates common operations for noise generation.

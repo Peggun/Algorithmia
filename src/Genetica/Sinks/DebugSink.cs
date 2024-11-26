@@ -1,8 +1,8 @@
-﻿using Algorithmia;
+﻿using Genetica;
 
 using System.Diagnostics;
 
-namespace Algorithmia.Sinks
+namespace Genetica.Sinks
 {
     /// <summary>
     /// Sink to write to the Debug Console

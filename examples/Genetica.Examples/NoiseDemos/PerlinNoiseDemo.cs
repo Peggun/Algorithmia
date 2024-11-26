@@ -1,7 +1,7 @@
-﻿using Algorithmia;
-using Algorithmia.Sinks;
+﻿using Genetica;
+using Genetica.Sinks;
 
-namespace Algorithmia.Examples.NoiseDemos.Perlin
+namespace Genetica.Examples.NoiseDemos.Perlin
 {
     /// <summary>
     /// Demonstrates Perlin noise generation and rendering to a image file.

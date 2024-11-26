@@ -1,5 +1,5 @@
 ﻿
-namespace Algorithmia.Sinks;
+namespace Genetica.Sinks;
 
 /// <summary>
 /// Sink to write to the Console

@@ -1,7 +1,7 @@
 ﻿using System;
-using Algoritmia;
+using Genetica;
 
-namespace Algoritmia.Examples.NoiseDemos
+namespace Genetica.Examples.NoiseDemos
 {
     class NoiseDemo
     {

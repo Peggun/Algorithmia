@@ -1,7 +1,7 @@
-﻿using Algorithmia;
-using Algorithmia.Sinks;
+﻿using Genetica;
+using Genetica.Sinks;
 
-namespace Algorithmia.Examples.NoiseDemos
+namespace Genetica.Examples.NoiseDemos
 {
     /// <summary>
     /// Demonstrates Open Simplex 2 noise generation and rendering to a image file.

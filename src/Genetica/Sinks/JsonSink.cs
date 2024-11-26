@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
 
-using Algorithmia;
-namespace Algorithmia.Sinks;
+using Genetica;
+namespace Genetica.Sinks;
 
 /// <summary>
 /// Sink to write to a JSON file

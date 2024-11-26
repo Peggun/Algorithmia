@@ -1,7 +1,7 @@
 ﻿using System;
-using Algorithmia.Examples.NoiseDemos.Perlin;
+using Genetica.Examples.NoiseDemos.Perlin;
 
-namespace Algorithmia.Examples
+namespace Genetica.Examples
 {
     class Program
     {

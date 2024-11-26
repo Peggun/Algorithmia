@@ -1,10 +1,10 @@
-<Window x:Class="Algorithmia.Visualisation.Views.MainWindow"
+<Window x:Class="Genetica.Visualisation.Views.MainWindow"
         xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:Algorithmia.Visualisation.ViewModels"
+        xmlns:vm="using:Genetica.Visualisation.ViewModels"
 		x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
-        Title="Algorithmia Live Map Viewer">
+        Title="Genetica Live Map Viewer">
 	<Window.DataContext>
 		<vm:MainWindowViewModel/>
 	</Window.DataContext>

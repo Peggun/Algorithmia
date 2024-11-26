@@ -1,7 +1,7 @@
 ﻿using Avalonia;
 using System;
 
-namespace Algorithmia.Visualisation
+namespace Genetica.Visualisation
 {
     internal sealed class Program
     {

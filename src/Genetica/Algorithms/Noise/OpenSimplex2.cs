@@ -1,7 +1,7 @@
-﻿using Algorithmia;
+﻿using Genetica;
 using SkiaSharp;
 
-namespace Algorithmia;
+namespace Genetica;
     public class OpenSimplex2Noise : BaseNoiseGenerator
     {
         public OpenSimplex2Noise() => Noise.SetNoiseType(FastNoiseLite.NoiseType.OpenSimplex2);

@@ -1,9 +1,9 @@
 ﻿using static FastNoiseLite;
 using FNLfloat = System.Single;
 
-using Algorithmia;
+using Genetica;
 
-namespace Algorithmia
+namespace Genetica
 {
     /// <summary>
     /// Base class for noise generation. Implements common FastNoiseLite functionality.

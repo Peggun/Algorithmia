@@ -1,6 +1,6 @@
-﻿using Algorithmia;
+﻿using Genetica;
 
-namespace Algorithmia;
+namespace Genetica;
 
 /// <summary>
 /// Factory for creating noise generator instances based on the noise type.

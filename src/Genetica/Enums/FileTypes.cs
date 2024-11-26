@@ -1,4 +1,4 @@
-﻿namespace Algorithmia
+﻿namespace Genetica
 {
     public enum FileTypes
     {

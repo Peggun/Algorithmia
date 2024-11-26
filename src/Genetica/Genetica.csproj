@@ -10,6 +10,12 @@
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	  <PackageReadmeFile>README.md</PackageReadmeFile>
 	  <PackageLicenseFile>LICENSE</PackageLicenseFile>
+	  <Authors>Peggun</Authors>
+	  <Description>A fast, flexible, and cross-platform world generation library for C#</Description>
+	  <PackageTags>noise; world generation; fast algorithms</PackageTags>
+	  <PackageProjectUrl>https://github.com/Peggun/Genetica</PackageProjectUrl>
+	  <RepositoryUrl>https://github.com/Peggun/Genetica</RepositoryUrl>
+	  <IsPreRelease>true</IsPreRelease>
 	  
   </PropertyGroup>
 
@@ -17,9 +23,6 @@
 	  <None Include="../../README.md" Pack="true" PackagePath=""/>
 	  <None Include="../../LICENSE" Pack="true" PackagePath=""/>
 	  
-    <PackageReference Include="Avalonia" Version="11.2.1" />
-    <PackageReference Include="Avalonia.Desktop" Version="11.2.1" />
-    <PackageReference Include="Avalonia.Skia" Version="11.2.1" />
     <PackageReference Include="CsvHelper" Version="33.0.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="SkiaSharp" Version="3.118.0-preview.1.2" />

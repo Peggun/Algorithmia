@@ -1,6 +1,6 @@
-﻿using Algorithmia;
+﻿using Genetica;
 
-namespace Algorithmia.Tests.UnitTests
+namespace Genetica.Tests.UnitTests
 {
     public class NoiseGeneratorTests
     {

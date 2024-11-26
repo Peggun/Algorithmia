@@ -1,6 +1,6 @@
-﻿using Algorithmia;
+﻿using Genetica;
 
-namespace Algorithmia.Sinks;
+namespace Genetica.Sinks;
 /// <summary>
 /// Sink to write to a text file
 /// </summary>

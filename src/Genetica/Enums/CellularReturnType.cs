@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Algorithmia
+namespace Genetica
 {
     public enum CellularReturnType
     {
