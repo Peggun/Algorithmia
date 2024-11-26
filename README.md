@@ -1,7 +1,8 @@
 # Algorithmia
 A fast, flexible, and cross-platform world generation library for C# and other languages. Built for speed and versatility, `Algorithmia` enables developers to create procedurally generated 2D and 3D worlds efficiently, whether for games, simulations, or creative tools.
 
-![Build Status](https://img.shields.io/github/actions/workflow/status/Peggun/Algorithmia/ci.yml)
+![Build Status](https://img.shields.io/github/actions/workflow/status/Peggun/Algorithmia/dotnet-build-test.yml)
+![Benchmarks Status](https://img.shields.io/github/actions/workflow/status/Peggun/Algorithmia/dotnet-benchmark.yml)
 
 ---
 
