@@ -23,4 +23,4 @@ jobs:
       run: dotnet restore
 
     - name: Run Benchmark
-      run: dotnet run --project tests/Algorithmia.Benchmarks -c Release
+      run: dotnet run --project tests/Genetica.Benchmarks -c Release
