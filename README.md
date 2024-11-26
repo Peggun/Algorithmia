@@ -44,8 +44,8 @@ private const float Scale = 0.01f;
 
 try
 {
-    // You can create multiple noises using this way. Just modify FastNoiseLite.NoiseType.Perlin to specific noise
-    var perlinNoise = NoiseGeneratorFactory.CreateNoiseGenerator(FastNoiseLite.NoiseType.Perlin);
+    // You can create multiple noises using this way. Just modify NoiseType.Perlin to specific noise
+    var perlinNoise = NoiseGeneratorFactory.CreateNoiseGenerator(NoiseType.Perlin);
     perlinNoise.SetSeed(1337);
     perlinNoise.SetFrequency(0.1f);
 
