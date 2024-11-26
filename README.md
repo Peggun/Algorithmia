@@ -6,8 +6,8 @@ A fast, flexible, and cross-platform world generation library for C# and other l
 
 ---
 ## Releases
-Version v0.1.0-alpha for Algorithmia's UI has been released! Feel free to check it out, request improvements or report bugs. You can find it underneath the [Releases](https://github.com/Peggun/Genetica/releases) tab.
-The Version v0.1.0-alpha for Algorithmia NuGet package is being a work in progress, and should be released soon.
+Version v0.1.0-alpha for Genetica's UI has been released! Feel free to check it out, request improvements or report bugs. You can find it underneath the [Releases](https://github.com/Peggun/Genetica/releases) tab.
+The Version v0.1.0-alpha for Genetica NuGet package is being a work in progress, and should be released soon.
 
 ## Table of Contents
 1. [Features](#features)
@@ -80,7 +80,7 @@ catch (Exception ex)
 - [x] Initial library release with Perlin noise support.
 - [x] Added Sink Support (Console, Debug Console, Plain Text, Image File)
 - [x] Expand noise algorithms and add more (e.g., Simplex, Voronoi).
-- [x] Visualisation of the Generated Maps using Avalonia (in progress)
+- [x] Visualisation of the Generated Maps using Avalonia
 - [ ] Multi-language bindings (e.g., Python, JavaScript).
 - [ ] Add 3D terrain generation.
 - [ ] Distribute via NuGet and other ways like through DLL's.
