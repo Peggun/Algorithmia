@@ -173,6 +173,28 @@
 							</StackPanel>
 						</StackPanel>
 					</StackPanel>
+
+					<StackPanel>
+						<TextBlock Text="Preview Settings" Foreground="White" FontSize="14" Margin="0,0,0,10"/>
+
+						<!-- Map Width -->
+						<StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,5">
+							<TextBlock Text="Map Width:" Foreground="White" FontSize="14" Margin="0,0,10,0"/>
+							<TextBox Width="100" Text="{Binding MapWidth, Mode=TwoWay}" />
+						</StackPanel>
+
+						<!-- Map Height -->
+						<StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,5">
+							<TextBlock Text="Map Height:" Foreground="White" FontSize="14" Margin="0,0,10,0"/>
+							<TextBox Width="100" Text="{Binding MapHeight, Mode=TwoWay}" />
+						</StackPanel>
+
+						<!-- Save Map Button -->
+						<Button Content="Save Map" Width="100" HorizontalAlignment="Left" Background="Gray"
+								Foreground="White" Margin="0,5,0,0" Command="{Binding SaveMapCommand}" />
+					</StackPanel>
+
+
 					<StackPanel>
 						<TextBlock>v0.1.0-alpha</TextBlock>
 					</StackPanel>

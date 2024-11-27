@@ -2,6 +2,7 @@
 using FNLfloat = System.Single;
 
 using Genetica;
+using SkiaSharp;
 
 namespace Genetica
 {

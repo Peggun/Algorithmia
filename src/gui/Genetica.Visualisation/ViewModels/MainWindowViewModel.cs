@@ -4,6 +4,7 @@ using Avalonia.Threading;
 using SkiaSharp;
 
 using Genetica;
+using Genetica.Sinks;
 
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -11,6 +12,8 @@ using System.IO;
 using System;
 using System.Timers;
 using System.Diagnostics;
+using System.Windows.Input;
+using System.Collections.Generic;
 
 namespace Genetica.Visualisation.ViewModels
 {
@@ -36,6 +39,11 @@ namespace Genetica.Visualisation.ViewModels
         private CellularReturnType _selectedReturnTypeIndex;
         private double _jitter = 0.5;
 
+        private int _windowHeight;
+        private int _windowWidth;
+
+        float[,] noiseData;
+
         private Bitmap? _generatedMapImage;
 
         private Timer _debounceTimer;
@@ -43,6 +51,8 @@ namespace Genetica.Visualisation.ViewModels
         public event PropertyChangedEventHandler? PropertyChanged;
 
         public bool IsCellularNoiseSelected => SelectedNoiseTypeIndex == NoiseType.Cellular;
+
+        ImageSink sink = new ImageSink();
 
         public MainWindowViewModel()
         {
@@ -54,8 +64,10 @@ namespace Genetica.Visualisation.ViewModels
                 Dispatcher.UIThread.InvokeAsync(UpdateMap); // Ensure UI update runs on main thread
             };
             UpdateMap(); // Generate initial map
+
+            SaveMapCommand = new RelayCommand(() => CreateImageFromNoiseData(true, noiseData));
         }
-       
+        public ICommand SaveMapCommand { get; }
 
         // Update OnPropertyChanged to include the computed property
         protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
@@ -93,13 +105,13 @@ namespace Genetica.Visualisation.ViewModels
             Debug.WriteLine($"Map Height: {_mapHeight}\nMap Width: {_mapWidth}");
 
             // Generate noise data using the current settings
-            float[,] noiseData = _noise.GenerateNoiseMap(_mapWidth, _mapHeight, _scale);
+            noiseData = _noise.GenerateNoiseMap(_mapWidth, _mapHeight, _scale);
 
             // Create an image from the noise data
-            GeneratedMapImage = CreateImageFromNoiseData(noiseData);
+            GeneratedMapImage = CreateImageFromNoiseData(false, noiseData);
         }
 
-        private Bitmap CreateImageFromNoiseData(float[,] noiseData)
+        private Bitmap CreateImageFromNoiseData(bool saveToFile, float[,] noiseData = null)
         {
             int height = noiseData.GetLength(0);
             int width = noiseData.GetLength(1);
@@ -128,7 +140,7 @@ namespace Genetica.Visualisation.ViewModels
                         int intensity = Math.Clamp((int)((noiseValue + 1) * 127.5f), 0, 255);
 
                         int index = (y * width + x) * 4; // 4 bytes per pixel (RGBA)
-                        ptr[index] = (byte)intensity;       // Red
+                        ptr[index] = (byte)intensity;      // Red
                         ptr[index + 1] = (byte)intensity;  // Green
                         ptr[index + 2] = (byte)intensity;  // Blue
                         ptr[index + 3] = 255;              // Alpha
@@ -140,10 +152,44 @@ namespace Genetica.Visualisation.ViewModels
             using var image = SKImage.FromBitmap(bitmap);
             using var data = image.Encode(SKEncodedImageFormat.Png, 100); // Encode as PNG
             using var memoryStream = new MemoryStream();
-            data.SaveTo(memoryStream);
-            memoryStream.Seek(0, SeekOrigin.Begin);
+            if (saveToFile)
+            {
+                sink.Write(noiseData);
+            }
+            else
+            {
+                data.SaveTo(memoryStream);    
+                memoryStream.Seek(0, SeekOrigin.Begin);
+                return new Bitmap(memoryStream); // Convert to Avalonia Bitmap
+            }
+            return null;
+        }
 
-            return new Bitmap(memoryStream); // Convert to Avalonia Bitmap
+        // Map Height
+        public int WindowHeight
+        {
+            get => _windowHeight;
+            set
+            {
+                if (_windowHeight != value)
+                {
+                    _windowHeight = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        // Map Height
+        public int WindowWidth
+        {
+            get => _windowWidth;
+            set
+            {
+                if (_windowWidth != value)
+                {
+                    _windowWidth = value;
+                    OnPropertyChanged();
+                }
+            }
         }
 
         // Map Height
@@ -380,6 +426,26 @@ namespace Genetica.Visualisation.ViewModels
                     OnPropertyChanged();
                 }
             }
+        }
+
+        public class RelayCommand : ICommand
+        {
+            private readonly Action _execute;
+            private readonly Func<bool>? _canExecute;
+
+            public RelayCommand(Action execute, Func<bool>? canExecute = null)
+            {
+                _execute = execute;
+                _canExecute = canExecute;
+            }
+
+            public event EventHandler? CanExecuteChanged;
+
+            public bool CanExecute(object? parameter) => _canExecute?.Invoke() ?? true;
+
+            public void Execute(object? parameter) => _execute();
+
+            public void RaiseCanExecuteChanged() => CanExecuteChanged?.Invoke(this, EventArgs.Empty);
         }
     }
 }

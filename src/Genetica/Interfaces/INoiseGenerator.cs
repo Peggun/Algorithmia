@@ -1,4 +1,5 @@
-﻿using FNLfloat = System.Single;
+﻿using SkiaSharp;
+using FNLfloat = System.Single;
 
 namespace Genetica
 {
@@ -178,6 +179,7 @@ namespace Genetica
         /// <param name="scale"></param>
         /// <param name="quality"></param>
         void SaveToFile(string filePath, int width, int height, float scale, int quality);
+        //void SaveToFile(string filePath, SKBitmap bitmap);
 
         /// <summary>
         /// Generate the Noise map with the specified noise type.

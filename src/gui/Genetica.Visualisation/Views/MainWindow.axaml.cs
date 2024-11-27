@@ -20,7 +20,7 @@ namespace Genetica.Visualisation.Views
             {
                 _resizeTimer?.Stop(); // Stop any existing timer
 
-                _resizeTimer = new System.Timers.Timer(200); // Delay 200ms
+                _resizeTimer = new Timer(200); // Delay 200ms
                 _resizeTimer.Elapsed += (s, args) =>
                 {
                     _resizeTimer?.Stop();
@@ -30,6 +30,8 @@ namespace Genetica.Visualisation.Views
                     {
                         viewModel.MapWidth = (int)e.NewSize.Width;
                         viewModel.MapHeight = (int)e.NewSize.Height;
+                        viewModel.WindowWidth = (int)e.NewSize.Width;
+                        viewModel.WindowHeight = (int)e.NewSize.Height;
                     });
                 };
                 _resizeTimer.Start();
